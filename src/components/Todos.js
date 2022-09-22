@@ -19,10 +19,13 @@ const Todos = () => {
               onChange={() => updateTodo(id)}
               checked={completed}
             />
-            <span className={completed ? `line-through` : ""}>
-              {name}
-            </span>
-            <ImCross onClick={() => deleteTodo(id)} className="cursor-pointer" />
+            <span className={completed ? `line-through` : ""}>{name}</span>
+
+            <ImCross
+              role="button"
+              onClick={() => deleteTodo(id)}
+              className="cursor-pointer"
+            />
           </div>
         );
       })}

@@ -6,8 +6,6 @@ export const TodoProvider = ({ children }) => {
   const [todos, setTodos] = useState([]);
   const totalCompletedTodos = useMemo(() => todos.filter((todo) => todo.completed),[todos])
 
-  console.log(todos)
-
   const createTodo = (todo) => {
     setTodos((prevState) => ([...prevState,todo]))
   }
